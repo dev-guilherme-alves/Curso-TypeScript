@@ -16,14 +16,26 @@ const person: [number, string] = [1, 'Jane']
 
 // Lista de Tuplas
 const people: [number, string][] = [
-    [1, 'Jane']
-    [2, 'Doe']
+    [1, 'Jane'],
+    [2, 'Doe'],
 ];
 
 // Intersections
 const productId: string | number | boolean = false
 
 // Enum
+enum Direction {
+    Up = 1,
+    Down = 2,
+    Left = 'Esquerda'
+}
 
+const direction = Direction.Left
 
-console.log(age);
+// Type Assertions
+const productName: any = "Bone";
+
+// let itemId = productName as string;
+let itemId = <string>productName;
+
+console.log(direction);
