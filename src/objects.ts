@@ -9,14 +9,18 @@ type User = {
     age: number;
     mail: string;
     password?: string;
-    orders: string[]
+    orders: Order[];
+    register(): string;
 };
 
 const user: User = {
     fistName: 'jane',
     age: 20,
     mail: 'jane@doe.com',
-    orders: [{ productId: 1, price: 2}],
+    orders: [{ productId: "1", price: 200}],
+    register() {
+        return 'a'
+    },
 };
 
 const printLog = (message: string) => {}
@@ -34,6 +38,9 @@ const author: Author & User = {
     mail: 'gama.2@mail.com',
     fistName: 'Guilherme',
     orders: [],
+    register() {
+        return 'a'
+    },
 };
 
 // Interfaces
